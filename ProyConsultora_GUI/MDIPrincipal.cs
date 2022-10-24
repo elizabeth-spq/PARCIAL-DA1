@@ -31,7 +31,9 @@ namespace ProyConsultora_GUI
 
         private void proyectoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           //codear
+            ProyectoMan01 man01 = new ProyectoMan01();
+            man01.MdiParent = this;
+            man01.Show();
         }
 
         private void colaboradorToolStripMenuItem_Click(object sender, EventArgs e)

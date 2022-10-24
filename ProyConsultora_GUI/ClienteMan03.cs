@@ -231,7 +231,7 @@ namespace ProyConsultora_GUI
                 objClienteBE.Id_Ubigeo = cboDepartamento.SelectedValue.ToString() +
                                          cboProvincia.SelectedValue.ToString() +
                                          cboDistrito.SelectedValue.ToString();
-                objClienteBE.Usu_Ult_Mod = "pfrey";
+                objClienteBE.Usu_Ult_Mod = clsCredenciales.Usuario;
 
                 //invocamos al metodo insertar
 
