@@ -38,7 +38,9 @@ namespace ProyConsultora_GUI
 
         private void colaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //codear
+            ColaboradorMan01 man01 = new ColaboradorMan01();
+            man01.MdiParent = this;
+            man01.Show();
         }
         private void MDIPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
