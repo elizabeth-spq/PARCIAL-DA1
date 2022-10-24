@@ -77,17 +77,17 @@ namespace ProyConsultora_GUI
         {
             try
             {
-                //ProyectoMan03 objProyMan03 = new ProyectoMan03();
-                ////Asignamos el codigo del producto seleccionado en el datagrid...
-                //objProyMan03.Codigo = dtgDatos.CurrentRow.Cells[0].Value.ToString();
+                ProyectoMan03 objProyMan03 = new ProyectoMan03();
+                //Asignamos el codigo del producto seleccionado en el datagrid...
+                objProyMan03.Codigo = dtgDatos.CurrentRow.Cells[0].Value.ToString();
 
-                ////dtgDatos.CurrentRow.Cells[0].Value.ToString();
+                //dtgDatos.CurrentRow.Cells[0].Value.ToString();
 
-                //objProyMan03.ShowDialog();
+                objProyMan03.ShowDialog();
 
-                ////Refrescamos el dataGrid...
-                //dtv = new DataView(objProyectoBL.ListarProyecto());
-                //CargarDatos(txtFiltro.Text);
+                //Refrescamos el dataGrid...
+                dtv = new DataView(objProyectoBL.ListarProyecto());
+                CargarDatos(txtFiltro.Text);
             }
             catch (Exception ex)
             {
