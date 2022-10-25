@@ -145,8 +145,6 @@ namespace ProyConsultora_GUI
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             String tip = "";
-            String tipCli = "";
-            String est = "";
 
             try
             {
@@ -191,13 +189,10 @@ namespace ProyConsultora_GUI
                 else
                     tip = "";
 
-
-                MessageBox.Show(tip);
-                MessageBox.Show(cboCategoria.SelectedValue.ToString());
                 //Si todo está ok...
                 objColaboradorBE.Cod_Cat_Col = cboCategoria.SelectedValue.ToString();
-                objColaboradorBE.Nom_Col = txtDireccion.Text.Trim();
-                objColaboradorBE.Ape_Col = txtDireccion.Text.Trim();
+                objColaboradorBE.Nom_Col = txtNombre.Text.Trim();
+                objColaboradorBE.Ape_Col = txtApellido.Text.Trim();
                 objColaboradorBE.Fec_Nac = dtpFecNac.Value.Date;
                 objColaboradorBE.Doc_Col = tip;
                 objColaboradorBE.Num_Doc_Col = mskDoc.Text;

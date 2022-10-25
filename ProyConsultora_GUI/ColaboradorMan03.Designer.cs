@@ -337,6 +337,7 @@
             this.btnGrabar.TabIndex = 8;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // label14
             // 

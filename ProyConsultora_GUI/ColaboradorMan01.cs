@@ -98,7 +98,6 @@ namespace ProyConsultora_GUI
         {
             try
             {
-                MessageBox.Show("ebtro");
 
                 DialogResult vrpta;
                 vrpta = MessageBox.Show("¿Seguro de eliminar el registro?", "Confirmar",
