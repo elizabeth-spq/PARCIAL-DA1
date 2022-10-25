@@ -74,5 +74,29 @@ namespace ProyConsultora_GUI
             }
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            tiempo -= 1;
+            this.Text = "Ingrese su login y contraseña. Le quedan...." + tiempo;
+            if (tiempo == 0)
+            {
+                MessageBox.Show("Lo sentimos, sobrepaso el tiempo de espera",
+                    "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Exit();
+            }
+        }
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer1.Enabled = false;
+            Application.Exit();
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
