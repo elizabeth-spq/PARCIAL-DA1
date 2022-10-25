@@ -26,7 +26,8 @@ namespace ProyConsultora_GUI
 
         private void ProductoMan01_Load(object sender, EventArgs e)
         {
-         
+            dtgDatos.AutoGenerateColumns = false;
+
             CargarDatos("");
 
         }

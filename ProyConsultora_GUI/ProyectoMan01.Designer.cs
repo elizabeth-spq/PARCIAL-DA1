@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgDatos = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -37,6 +43,12 @@
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblRegistros = new System.Windows.Forms.Label();
+            this.Cod_Proy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom_Proy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_Proyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Imp_Imp_Estm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado_Proyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +58,13 @@
             this.dtgDatos.AllowUserToDeleteRows = false;
             this.dtgDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cod_Proy,
+            this.Nom_Proy,
+            this.Nom_Area,
+            this.Tipo_Proyecto,
+            this.Imp_Imp_Estm,
+            this.Estado_Proyecto});
             this.dtgDatos.Location = new System.Drawing.Point(14, 92);
             this.dtgDatos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtgDatos.Name = "dtgDatos";
@@ -137,6 +156,68 @@
             this.lblRegistros.TabIndex = 2;
             this.lblRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // Cod_Proy
+            // 
+            this.Cod_Proy.DataPropertyName = "Cod_Proy";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Cod_Proy.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Cod_Proy.HeaderText = "Código";
+            this.Cod_Proy.MinimumWidth = 6;
+            this.Cod_Proy.Name = "Cod_Proy";
+            this.Cod_Proy.ReadOnly = true;
+            // 
+            // Nom_Proy
+            // 
+            this.Nom_Proy.DataPropertyName = "Nom_Proy";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Nom_Proy.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Nom_Proy.HeaderText = "Proyecto";
+            this.Nom_Proy.MinimumWidth = 6;
+            this.Nom_Proy.Name = "Nom_Proy";
+            this.Nom_Proy.ReadOnly = true;
+            // 
+            // Nom_Area
+            // 
+            this.Nom_Area.DataPropertyName = "Nom_Area";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Nom_Area.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Nom_Area.HeaderText = "Área";
+            this.Nom_Area.MinimumWidth = 6;
+            this.Nom_Area.Name = "Nom_Area";
+            this.Nom_Area.ReadOnly = true;
+            // 
+            // Tipo_Proyecto
+            // 
+            this.Tipo_Proyecto.DataPropertyName = "Tipo_Proyecto";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Tipo_Proyecto.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Tipo_Proyecto.HeaderText = "Tipo";
+            this.Tipo_Proyecto.MinimumWidth = 6;
+            this.Tipo_Proyecto.Name = "Tipo_Proyecto";
+            this.Tipo_Proyecto.ReadOnly = true;
+            // 
+            // Imp_Imp_Estm
+            // 
+            this.Imp_Imp_Estm.DataPropertyName = "Imp_Imp_Estm";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Imp_Imp_Estm.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Imp_Imp_Estm.HeaderText = "Presupuesto Inicial";
+            this.Imp_Imp_Estm.MinimumWidth = 6;
+            this.Imp_Imp_Estm.Name = "Imp_Imp_Estm";
+            this.Imp_Imp_Estm.ReadOnly = true;
+            // 
+            // Estado_Proyecto
+            // 
+            this.Estado_Proyecto.DataPropertyName = "Estado_Proyecto";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Estado_Proyecto.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Estado_Proyecto.HeaderText = "Estado";
+            this.Estado_Proyecto.MinimumWidth = 6;
+            this.Estado_Proyecto.Name = "Estado_Proyecto";
+            this.Estado_Proyecto.ReadOnly = true;
+            // 
             // ProyectoMan01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -176,5 +257,11 @@
         private TextBox txtFiltro;
         private Label label2;
         private Label lblRegistros;
+        private DataGridViewTextBoxColumn Cod_Proy;
+        private DataGridViewTextBoxColumn Nom_Proy;
+        private DataGridViewTextBoxColumn Nom_Area;
+        private DataGridViewTextBoxColumn Tipo_Proyecto;
+        private DataGridViewTextBoxColumn Imp_Imp_Estm;
+        private DataGridViewTextBoxColumn Estado_Proyecto;
     }
 }
