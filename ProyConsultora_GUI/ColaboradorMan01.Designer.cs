@@ -42,12 +42,18 @@
             // 
             // dtgDatos
             // 
+            this.dtgDatos.AllowUserToAddRows = false;
+            this.dtgDatos.AllowUserToDeleteRows = false;
+            this.dtgDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDatos.Location = new System.Drawing.Point(14, 92);
             this.dtgDatos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtgDatos.Name = "dtgDatos";
+            this.dtgDatos.ReadOnly = true;
+            this.dtgDatos.RowHeadersVisible = false;
             this.dtgDatos.RowHeadersWidth = 51;
             this.dtgDatos.RowTemplate.Height = 25;
+            this.dtgDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDatos.Size = new System.Drawing.Size(1110, 453);
             this.dtgDatos.TabIndex = 0;
             // 
@@ -82,6 +88,7 @@
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCerrar
             // 

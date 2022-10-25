@@ -72,20 +72,57 @@ namespace ProyConsultora_GUI
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+
             try
             {
                 ColaboradorMan03 objColaMan3 = new ColaboradorMan03();
+                //Asignamos el codigo del producto seleccionado en el datagrid...
+                objColaMan3.Codigo = dtgDatos.CurrentRow.Cells[0].Value.ToString();
+
+                //dtgDatos.CurrentRow.Cells[0].Value.ToString();
+
                 objColaMan3.ShowDialog();
 
-                //Se carga la vista
-                CargarDatos(txtFiltro.Text.Trim());
+                //Refrescamos el dataGrid...
+                dtv = new DataView(objColaboradorBL.ListarColaborador());
+                CargarDatos(txtFiltro.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message);
             }
+            
 
         }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("ebtro");
+
+                DialogResult vrpta;
+                vrpta = MessageBox.Show("¿Seguro de eliminar el registro?", "Confirmar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (vrpta == DialogResult.Yes)
+                {
+                    if (objColaboradorBL.EliminarColaborador(dtgDatos.CurrentRow.Cells[0].Value.ToString(),
+                                                       clsCredenciales.Usuario) == true)
+                    {
+                        //Refrescamos el datagrid
+                        CargarDatos(txtFiltro.Text.Trim());
+                    }
+                    else
+                    {
+                        throw new Exception("No se puede elimar el registro porque está vinculado a otra tabla");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+            }
+        }
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {

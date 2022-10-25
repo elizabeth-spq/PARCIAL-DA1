@@ -75,6 +75,7 @@ namespace ProyConsultora_GUI
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 ProyectoMan03 objProyMan03 = new ProyectoMan03();
@@ -82,7 +83,7 @@ namespace ProyConsultora_GUI
                 objProyMan03.Codigo = dtgDatos.CurrentRow.Cells[0].Value.ToString();
 
                 //dtgDatos.CurrentRow.Cells[0].Value.ToString();
-
+              
                 objProyMan03.ShowDialog();
 
                 //Refrescamos el dataGrid...
@@ -97,6 +98,7 @@ namespace ProyConsultora_GUI
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+
             try
             {
                  DialogResult vrpta;
