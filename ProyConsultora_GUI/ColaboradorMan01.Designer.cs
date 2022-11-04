@@ -34,15 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgDatos = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblRegistros = new System.Windows.Forms.Label();
             this.Cod_Col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colaborador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ape_Col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom_Col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +50,14 @@
             this.Estado_Colaborador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Antiguedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fot_Col = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblRegistros = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cod_Col,
+            this.Colaborador,
             this.Ape_Col,
             this.Nom_Col,
             this.Nom_Area,
@@ -91,87 +93,7 @@
             this.dtgDatos.RowTemplate.Height = 25;
             this.dtgDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDatos.Size = new System.Drawing.Size(1110, 453);
-            this.dtgDatos.TabIndex = 0;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(582, 621);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(111, 43);
-            this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(714, 621);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(111, 43);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(846, 621);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(111, 43);
-            this.btnEliminar.TabIndex = 1;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Location = new System.Drawing.Point(1013, 621);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(111, 43);
-            this.btnCerrar.TabIndex = 1;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ingrese filtro por descripcion:";
-            // 
-            // txtFiltro
-            // 
-            this.txtFiltro.Location = new System.Drawing.Point(246, 32);
-            this.txtFiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(358, 27);
-            this.txtFiltro.TabIndex = 3;
-            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(937, 561);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Registros:";
-            // 
-            // lblRegistros
-            // 
-            this.lblRegistros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRegistros.Location = new System.Drawing.Point(1027, 561);
-            this.lblRegistros.Name = "lblRegistros";
-            this.lblRegistros.Size = new System.Drawing.Size(96, 29);
-            this.lblRegistros.TabIndex = 2;
-            this.lblRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dtgDatos.TabIndex = 1;
             // 
             // Cod_Col
             // 
@@ -181,6 +103,14 @@
             this.Cod_Col.Name = "Cod_Col";
             this.Cod_Col.ReadOnly = true;
             // 
+            // Colaborador
+            // 
+            this.Colaborador.DataPropertyName = "Colaborador";
+            this.Colaborador.HeaderText = "Colaborador";
+            this.Colaborador.MinimumWidth = 6;
+            this.Colaborador.Name = "Colaborador";
+            this.Colaborador.ReadOnly = true;
+            // 
             // Ape_Col
             // 
             this.Ape_Col.DataPropertyName = "Ape_Col";
@@ -188,6 +118,7 @@
             this.Ape_Col.MinimumWidth = 6;
             this.Ape_Col.Name = "Ape_Col";
             this.Ape_Col.ReadOnly = true;
+            this.Ape_Col.Visible = false;
             // 
             // Nom_Col
             // 
@@ -196,6 +127,7 @@
             this.Nom_Col.MinimumWidth = 6;
             this.Nom_Col.Name = "Nom_Col";
             this.Nom_Col.ReadOnly = true;
+            this.Nom_Col.Visible = false;
             // 
             // Nom_Area
             // 
@@ -223,6 +155,7 @@
             this.Fec_Nac.MinimumWidth = 6;
             this.Fec_Nac.Name = "Fec_Nac";
             this.Fec_Nac.ReadOnly = true;
+            this.Fec_Nac.Visible = false;
             // 
             // Tipo_Documento
             // 
@@ -233,6 +166,7 @@
             this.Tipo_Documento.MinimumWidth = 6;
             this.Tipo_Documento.Name = "Tipo_Documento";
             this.Tipo_Documento.ReadOnly = true;
+            this.Tipo_Documento.Visible = false;
             // 
             // Num_Doc_Col
             // 
@@ -241,6 +175,7 @@
             this.Num_Doc_Col.MinimumWidth = 6;
             this.Num_Doc_Col.Name = "Num_Doc_Col";
             this.Num_Doc_Col.ReadOnly = true;
+            this.Num_Doc_Col.Visible = false;
             // 
             // Cel_Col
             // 
@@ -249,6 +184,7 @@
             this.Cel_Col.MinimumWidth = 6;
             this.Cel_Col.Name = "Cel_Col";
             this.Cel_Col.ReadOnly = true;
+            this.Cel_Col.Visible = false;
             // 
             // Ema_Col
             // 
@@ -265,6 +201,7 @@
             this.Dir_Col.MinimumWidth = 6;
             this.Dir_Col.Name = "Dir_Col";
             this.Dir_Col.ReadOnly = true;
+            this.Dir_Col.Visible = false;
             // 
             // Sue_Col
             // 
@@ -297,6 +234,7 @@
             this.Antiguedad.MinimumWidth = 6;
             this.Antiguedad.Name = "Antiguedad";
             this.Antiguedad.ReadOnly = true;
+            this.Antiguedad.Visible = false;
             // 
             // Fot_Col
             // 
@@ -308,6 +246,86 @@
             this.Fot_Col.ReadOnly = true;
             this.Fot_Col.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Fot_Col.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(582, 621);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(111, 43);
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(714, 621);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(111, 43);
+            this.btnActualizar.TabIndex = 2;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(846, 621);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(111, 43);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(1013, 621);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(111, 43);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Ingrese filtro por descripcion:";
+            // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Location = new System.Drawing.Point(246, 32);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(358, 27);
+            this.txtFiltro.TabIndex = 0;
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(937, 561);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Registros:";
+            // 
+            // lblRegistros
+            // 
+            this.lblRegistros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblRegistros.Location = new System.Drawing.Point(1027, 561);
+            this.lblRegistros.Name = "lblRegistros";
+            this.lblRegistros.Size = new System.Drawing.Size(96, 29);
+            this.lblRegistros.TabIndex = 2;
+            this.lblRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ColaboradorMan01
             // 
@@ -349,6 +367,7 @@
         private Label label2;
         private Label lblRegistros;
         private DataGridViewTextBoxColumn Cod_Col;
+        private DataGridViewTextBoxColumn Colaborador;
         private DataGridViewTextBoxColumn Ape_Col;
         private DataGridViewTextBoxColumn Nom_Col;
         private DataGridViewTextBoxColumn Nom_Area;

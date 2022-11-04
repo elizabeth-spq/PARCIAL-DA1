@@ -124,7 +124,7 @@
             this.grpDatos.Name = "grpDatos";
             this.grpDatos.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpDatos.Size = new System.Drawing.Size(1052, 691);
-            this.grpDatos.TabIndex = 2;
+            this.grpDatos.TabIndex = 0;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Datos";
             // 
@@ -133,7 +133,7 @@
             this.button1.Location = new System.Drawing.Point(882, 408);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 42);
-            this.button1.TabIndex = 9;
+            this.button1.TabIndex = 16;
             this.button1.Text = "Cargar Foto";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnCargar_Click);
@@ -179,7 +179,7 @@
             this.txtSueldo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(142, 27);
-            this.txtSueldo.TabIndex = 23;
+            this.txtSueldo.TabIndex = 14;
             this.txtSueldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
@@ -198,7 +198,7 @@
             this.dtpFecNac.Location = new System.Drawing.Point(656, 142);
             this.dtpFecNac.Name = "dtpFecNac";
             this.dtpFecNac.Size = new System.Drawing.Size(372, 27);
-            this.dtpFecNac.TabIndex = 20;
+            this.dtpFecNac.TabIndex = 4;
             // 
             // chkEstado
             // 
@@ -207,7 +207,7 @@
             this.chkEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(80, 24);
-            this.chkEstado.TabIndex = 19;
+            this.chkEstado.TabIndex = 15;
             this.chkEstado.Text = "Activo?";
             this.chkEstado.UseVisualStyleBackColor = true;
             // 
@@ -227,7 +227,7 @@
             this.mskDoc.Mask = "99999999999";
             this.mskDoc.Name = "mskDoc";
             this.mskDoc.Size = new System.Drawing.Size(177, 27);
-            this.mskDoc.TabIndex = 12;
+            this.mskDoc.TabIndex = 9;
             // 
             // cboProvincia
             // 
@@ -237,7 +237,7 @@
             this.cboProvincia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(372, 28);
-            this.cboProvincia.TabIndex = 16;
+            this.cboProvincia.TabIndex = 12;
             this.cboProvincia.SelectionChangeCommitted += new System.EventHandler(this.cboProvincia_SelectionChangeCommitted);
             // 
             // cboDistrito
@@ -248,7 +248,7 @@
             this.cboDistrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboDistrito.Name = "cboDistrito";
             this.cboDistrito.Size = new System.Drawing.Size(372, 28);
-            this.cboDistrito.TabIndex = 17;
+            this.cboDistrito.TabIndex = 13;
             // 
             // label7
             // 
@@ -281,22 +281,22 @@
             // 
             this.cboArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboArea.FormattingEnabled = true;
-            this.cboArea.Location = new System.Drawing.Point(135, 180);
+            this.cboArea.Location = new System.Drawing.Point(135, 141);
             this.cboArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboArea.Name = "cboArea";
             this.cboArea.Size = new System.Drawing.Size(372, 28);
-            this.cboArea.TabIndex = 1;
+            this.cboArea.TabIndex = 2;
             this.cboArea.SelectionChangeCommitted += new System.EventHandler(this.cboArea_SelectionChangeCommitted);
             // 
             // cboCategoria
             // 
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(135, 126);
+            this.cboCategoria.Location = new System.Drawing.Point(135, 202);
             this.cboCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(372, 28);
-            this.cboCategoria.TabIndex = 1;
+            this.cboCategoria.TabIndex = 3;
             this.cboCategoria.SelectionChangeCommitted += new System.EventHandler(this.cboCategoria_SelectionChangeCommitted);
             // 
             // cboDepartamento
@@ -324,7 +324,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(882, 626);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(146, 42);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -334,7 +334,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(882, 572);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(146, 42);
-            this.btnGrabar.TabIndex = 8;
+            this.btnGrabar.TabIndex = 17;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -373,7 +373,7 @@
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(21, 180);
+            this.label15.Location = new System.Drawing.Point(21, 141);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(107, 28);
             this.label15.TabIndex = 3;
@@ -387,7 +387,7 @@
             this.groupBox1.Location = new System.Drawing.Point(19, 254);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(275, 119);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Doc.";
             // 
@@ -397,7 +397,7 @@
             this.rdbCarne.Location = new System.Drawing.Point(16, 75);
             this.rdbCarne.Name = "rdbCarne";
             this.rdbCarne.Size = new System.Drawing.Size(134, 24);
-            this.rdbCarne.TabIndex = 1;
+            this.rdbCarne.TabIndex = 2;
             this.rdbCarne.TabStop = true;
             this.rdbCarne.Text = "Carné Extrajería";
             this.rdbCarne.UseVisualStyleBackColor = true;
@@ -426,7 +426,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(21, 126);
+            this.label2.Location = new System.Drawing.Point(21, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 28);
             this.label2.TabIndex = 3;
@@ -440,7 +440,7 @@
             this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(372, 27);
-            this.txtCelular.TabIndex = 0;
+            this.txtCelular.TabIndex = 7;
             // 
             // txtTel
             // 
@@ -450,7 +450,7 @@
             this.txtTel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(372, 27);
-            this.txtTel.TabIndex = 0;
+            this.txtTel.TabIndex = 6;
             // 
             // txtEmail
             // 
@@ -460,7 +460,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(372, 27);
-            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TabIndex = 5;
             // 
             // txtApellido
             // 
@@ -470,7 +470,7 @@
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(372, 27);
-            this.txtApellido.TabIndex = 0;
+            this.txtApellido.TabIndex = 1;
             // 
             // txtNombre
             // 
@@ -502,7 +502,7 @@
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(372, 27);
-            this.txtDireccion.TabIndex = 0;
+            this.txtDireccion.TabIndex = 10;
             // 
             // label1
             // 

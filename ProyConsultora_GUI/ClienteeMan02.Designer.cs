@@ -104,7 +104,7 @@
             this.chkEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(80, 24);
-            this.chkEstado.TabIndex = 19;
+            this.chkEstado.TabIndex = 11;
             this.chkEstado.Text = "Activo?";
             this.chkEstado.UseVisualStyleBackColor = true;
             // 
@@ -115,7 +115,7 @@
             this.chkTipoCli.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkTipoCli.Name = "chkTipoCli";
             this.chkTipoCli.Size = new System.Drawing.Size(149, 24);
-            this.chkTipoCli.TabIndex = 19;
+            this.chkTipoCli.TabIndex = 10;
             this.chkTipoCli.Text = "Opción a crédito?";
             this.chkTipoCli.UseVisualStyleBackColor = true;
             // 
@@ -144,7 +144,7 @@
             this.mskDoc.Mask = "99999999999";
             this.mskDoc.Name = "mskDoc";
             this.mskDoc.Size = new System.Drawing.Size(177, 27);
-            this.mskDoc.TabIndex = 12;
+            this.mskDoc.TabIndex = 3;
             // 
             // cboProvincia
             // 
@@ -154,7 +154,7 @@
             this.cboProvincia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(372, 28);
-            this.cboProvincia.TabIndex = 16;
+            this.cboProvincia.TabIndex = 8;
             this.cboProvincia.SelectionChangeCommitted += new System.EventHandler(this.cboProvincia_SelectionChangeCommitted);
             // 
             // cboDistrito
@@ -165,7 +165,7 @@
             this.cboDistrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboDistrito.Name = "cboDistrito";
             this.cboDistrito.Size = new System.Drawing.Size(372, 28);
-            this.cboDistrito.TabIndex = 17;
+            this.cboDistrito.TabIndex = 9;
             // 
             // label7
             // 
@@ -213,7 +213,7 @@
             this.cboDepartamento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(372, 28);
-            this.cboDepartamento.TabIndex = 11;
+            this.cboDepartamento.TabIndex = 7;
             this.cboDepartamento.SelectionChangeCommitted += new System.EventHandler(this.cboDepartamento_SelectionChangeCommitted);
             // 
             // label10
@@ -230,7 +230,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(361, 626);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(146, 42);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 13;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
@@ -240,7 +240,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(361, 572);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(146, 42);
-            this.btnGrabar.TabIndex = 8;
+            this.btnGrabar.TabIndex = 12;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click_1);
@@ -277,7 +277,7 @@
             this.groupBox1.Location = new System.Drawing.Point(19, 145);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(275, 119);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Doc.";
             // 
@@ -287,14 +287,15 @@
             this.rdbCarne.Location = new System.Drawing.Point(16, 75);
             this.rdbCarne.Name = "rdbCarne";
             this.rdbCarne.Size = new System.Drawing.Size(134, 24);
-            this.rdbCarne.TabIndex = 1;
-            this.rdbCarne.TabStop = true;
+            this.rdbCarne.TabIndex = 2;
             this.rdbCarne.Text = "Carné Extrajería";
             this.rdbCarne.UseVisualStyleBackColor = true;
+            this.rdbCarne.CheckedChanged += new System.EventHandler(this.rdbCarne_CheckedChanged);
             // 
             // rdbRuc
             // 
             this.rdbRuc.AutoSize = true;
+            this.rdbRuc.Checked = true;
             this.rdbRuc.Location = new System.Drawing.Point(175, 38);
             this.rdbRuc.Name = "rdbRuc";
             this.rdbRuc.Size = new System.Drawing.Size(58, 24);
@@ -302,6 +303,7 @@
             this.rdbRuc.TabStop = true;
             this.rdbRuc.Text = "RUC";
             this.rdbRuc.UseVisualStyleBackColor = true;
+            this.rdbRuc.CheckedChanged += new System.EventHandler(this.rdbRuc_CheckedChanged);
             // 
             // rdbDni
             // 
@@ -310,9 +312,9 @@
             this.rdbDni.Name = "rdbDni";
             this.rdbDni.Size = new System.Drawing.Size(56, 24);
             this.rdbDni.TabIndex = 0;
-            this.rdbDni.TabStop = true;
             this.rdbDni.Text = "DNI";
             this.rdbDni.UseVisualStyleBackColor = true;
+            this.rdbDni.CheckedChanged += new System.EventHandler(this.rdbDni_CheckedChanged);
             // 
             // label2
             // 
@@ -328,7 +330,8 @@
             this.txtTel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(372, 27);
-            this.txtTel.TabIndex = 0;
+            this.txtTel.TabIndex = 6;
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // txtEmail
             // 
@@ -336,7 +339,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(372, 27);
-            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TabIndex = 5;
             // 
             // txtNombre
             // 
@@ -352,7 +355,7 @@
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(372, 27);
-            this.txtDireccion.TabIndex = 0;
+            this.txtDireccion.TabIndex = 4;
             // 
             // label1
             // 

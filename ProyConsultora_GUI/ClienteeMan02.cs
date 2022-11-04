@@ -103,14 +103,32 @@ namespace ProyConsultora_GUI
             try
             {
                 //Validamos...
-                if(txtDireccion.Text.Trim()==String.Empty)
+                if (txtNombre.Text.Trim() == String.Empty)
                 {
-                    throw new Exception("La razon social es obligatoria");
+                    throw new Exception("El nombre es obligatorio");
                 }
-                if(mskDoc.Text== String.Empty)
+                if (txtDireccion.Text.Trim()==String.Empty)
+                {
+                    throw new Exception("La dirección es obligatoria");
+                }
+                
+                if (mskDoc.Text== String.Empty)
                 {
                     throw new Exception("El Nº de Documento es obligatorio");
                 }
+                if (rdbCarne.Checked == true && mskDoc.Text.Trim().Length != 9)
+                {
+                    throw new Exception("El carné de extrajería debe tener 9 caracteres");
+                }
+                if (rdbDni.Checked == true && mskDoc.Text.Trim().Length != 8)
+                {
+                    throw new Exception("El DNI debe tener 8 caracteres");
+                }
+                if (rdbRuc.Checked == true && mskDoc.Text.Trim().Length != 11)
+                {
+                    throw new Exception("El Ruc debe tener 11 caracteres");
+                }
+             
 
                 //RADIOBUTTON CHECKED
 
@@ -119,12 +137,12 @@ namespace ProyConsultora_GUI
                     tip = "2";
                 }
                 else
-              if (rdbRuc.Checked == true)
+                 if (rdbRuc.Checked == true)
                 {
                     tip = "1";
                 }
                 else
-              if (rdbCarne.Checked == true)
+                 if (rdbCarne.Checked == true)
                 {
                     tip = "3";
                 }
@@ -168,7 +186,7 @@ namespace ProyConsultora_GUI
 
                 //invocamos al metodo insertar
 
-                if (objClienteBL.InsertarCliente(objClienteBE) == true)
+                if (objClienteBL.InsertarCliente(objClienteBE)==true)
                 {
                     this.Close();
                 }
@@ -186,6 +204,35 @@ namespace ProyConsultora_GUI
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void rdbDni_CheckedChanged(object sender, EventArgs e)
+        {
+            mskDoc.Clear();
+            mskDoc.Mask = "99999999";
+        }
+
+        private void rdbRuc_CheckedChanged(object sender, EventArgs e)
+        {
+            mskDoc.Clear();
+            mskDoc.Mask = "99999999999";
+        }
+
+        private void rdbCarne_CheckedChanged(object sender, EventArgs e)
+        {
+            mskDoc.Clear();
+            mskDoc.Mask = "999999999";
+        }
+
+        private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar !=8) //Si no es BackSpace
+            {
+                if(char.IsDigit(e.KeyChar)==false)//Ni tampoco es un digito
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }

@@ -81,7 +81,7 @@
             this.groupBox1.Location = new System.Drawing.Point(19, 145);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(488, 115);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Proyecto:";
             // 
@@ -91,7 +91,7 @@
             this.rdbNoFac.Location = new System.Drawing.Point(274, 75);
             this.rdbNoFac.Name = "rdbNoFac";
             this.rdbNoFac.Size = new System.Drawing.Size(122, 24);
-            this.rdbNoFac.TabIndex = 2;
+            this.rdbNoFac.TabIndex = 3;
             this.rdbNoFac.TabStop = true;
             this.rdbNoFac.Text = "No Facturable";
             this.rdbNoFac.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             this.rdbHorasTra.Location = new System.Drawing.Point(48, 75);
             this.rdbHorasTra.Name = "rdbHorasTra";
             this.rdbHorasTra.Size = new System.Drawing.Size(165, 24);
-            this.rdbHorasTra.TabIndex = 1;
+            this.rdbHorasTra.TabIndex = 2;
             this.rdbHorasTra.TabStop = true;
             this.rdbHorasTra.Text = "Por horas trabajadas";
             this.rdbHorasTra.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(365, 280);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(142, 42);
-            this.btnGrabar.TabIndex = 8;
+            this.btnGrabar.TabIndex = 5;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -144,7 +144,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(365, 338);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(142, 42);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -176,7 +176,7 @@
             this.chkEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(106, 24);
-            this.chkEstado.TabIndex = 19;
+            this.chkEstado.TabIndex = 4;
             this.chkEstado.Text = "Finalizado?";
             this.chkEstado.UseVisualStyleBackColor = true;
             // 
@@ -195,7 +195,7 @@
             this.txtPresupuesto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPresupuesto.Name = "txtPresupuesto";
             this.txtPresupuesto.Size = new System.Drawing.Size(142, 27);
-            this.txtPresupuesto.TabIndex = 21;
+            this.txtPresupuesto.TabIndex = 3;
             this.txtPresupuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPresupuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPresupuesto_KeyPress);
             // 
@@ -217,7 +217,7 @@
             this.grpDatos.Name = "grpDatos";
             this.grpDatos.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpDatos.Size = new System.Drawing.Size(544, 393);
-            this.grpDatos.TabIndex = 1;
+            this.grpDatos.TabIndex = 0;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Datos";
             // 
