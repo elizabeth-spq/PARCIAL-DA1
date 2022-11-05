@@ -169,7 +169,22 @@ namespace ProyConsultora_GUI
                 {
                     throw new Exception("El Nº de Documento es obligatorio");
                 }
-
+                if (rdbCarne.Checked == true && mskDoc.Text.Trim().Length < 8)
+                {
+                    throw new Exception("El carné de extrajería debe tener entre 8 y 12 caracteres");
+                }
+                if (rdbDni.Checked == true && mskDoc.Text.Trim().Length != 8)
+                {
+                    throw new Exception("El DNI debe tener 8 caracteres");
+                }
+                if (rdbPasa.Checked == true && mskDoc.Text.Trim().Length < 9 )
+                {
+                    throw new Exception("El Pasaporte debe tener entre 9 y 12 caracteres");
+                }
+                if (txtSueldo.Text.Trim() == String.Empty)
+                {
+                    throw new Exception("Campo obligatorio");
+                }
                 //RADIOBUTTON CHECKED
 
                 if (rdbDni.Checked == true)
@@ -229,6 +244,35 @@ namespace ProyConsultora_GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void rdbDni_CheckedChanged(object sender, EventArgs e)
+        {
+            mskDoc.Clear();
+            mskDoc.Mask = "99999999";
+        }
+
+        private void rdbPasa_CheckedChanged(object sender, EventArgs e)
+        {
+            mskDoc.Clear();
+            mskDoc.Mask = "999999999999";
+        }
+
+        private void rdbCarne_CheckedChanged(object sender, EventArgs e)
+        {
+            mskDoc.Clear();
+            mskDoc.Mask = "999999999999";
+        }
+
+        private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8) //Si no es BackSpace
+            {
+                if (char.IsDigit(e.KeyChar) == false)//Ni tampoco es un digito
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }

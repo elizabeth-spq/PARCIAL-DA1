@@ -179,9 +179,9 @@ namespace ProyConsultora_GUI
                 {
                     throw new Exception("El Nº de Documento es obligatorio");
                 }
-                if (rdbCarne.Checked == true && mskDoc.Text.Trim().Length != 9)
+                if (rdbCarne.Checked == true && mskDoc.Text.Trim().Length < 8 )
                 {
-                    throw new Exception("El carné de extrajería debe tener 9 caracteres");
+                    throw new Exception("El carné de extrajería debe tener entre 8 y 12 caracteres");
                 }
                 if (rdbDni.Checked == true && mskDoc.Text.Trim().Length != 8)
                 {
@@ -275,14 +275,11 @@ namespace ProyConsultora_GUI
         {
             CargarUbigeo(cboDepartamento.SelectedValue.ToString(), "01", "01");
         }
-
         private void cboProvincia_SelectionChangeCommitted(object sender, EventArgs e)
         {
             CargarUbigeo(cboDepartamento.SelectedValue.ToString(),
                                 cboProvincia.SelectedValue.ToString(), "01");
         }
-
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -303,7 +300,7 @@ namespace ProyConsultora_GUI
         private void rdbCarne_CheckedChanged(object sender, EventArgs e)
         {
         
-            mskDoc.Mask = "999999999";
+            mskDoc.Mask = "99999999999";
         }
 
         private void txtTel_KeyPress(object sender, KeyPressEventArgs e)

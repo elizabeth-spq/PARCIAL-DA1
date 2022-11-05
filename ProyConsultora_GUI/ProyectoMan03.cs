@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,13 +88,58 @@ namespace ProyConsultora_GUI
                     tip4 = false;
                 }
 
+                //estado de proyecto
+                Boolean est1, est2, est3, est4,est5;
+                if (Convert.ToInt16(objProyectoBE.Estado) == 0)
+                {
+                    est1 = true;
+                }
+                else
+                {
+                    est1 = false;
+                }
+                if (Convert.ToInt16(objProyectoBE.Estado) == 1)
+                {
+                    est2 = true;
+                }
+                else
+                {
+                    est2 = false;
+                }
+                if (Convert.ToInt16(objProyectoBE.Estado) == 2)
+                {
+                    est3 = true;
+                }
+                else
+                {
+                    est3 = false;
+                }
+                if (Convert.ToInt16(objProyectoBE.Estado) == 3)
+                {
+                    est4 = true;
+                }
+                else
+                {
+                    est4 = false;
+                }
+                if (Convert.ToInt16(objProyectoBE.Estado) == 4)
+                {
+                    est5 = true;
+                }
+                else
+                {
+                    est5 = false;
+                }
                 rdbFacRe.Checked = tip1;
                 rdbFacNoRe.Checked = tip2;
                 rdbHorasTra.Checked = tip3;
                 rdbNoFac.Checked = tip4;
                 txtPresupuesto.Text = objProyectoBE.Imp_Imp_Estm.ToString();
-                chkEstado.Checked = Convert.ToBoolean(objProyectoBE.Estado);
-
+                rdbProgramado.Checked = est1;
+                rdbEjecucion.Checked = est2;
+                rdbDetenido.Checked = est3;
+                rdbCancelado.Checked = est4;
+                rdbFinalizado.Checked = est5;
             }
             catch (Exception ex)
             {
@@ -111,6 +157,7 @@ namespace ProyConsultora_GUI
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             String tip = "";
+            int estado;
             try
             {
                 //Validamos...
@@ -128,7 +175,7 @@ namespace ProyConsultora_GUI
                     throw new Exception("El presupuesto es obligatorio");
                 }
 
-                //RADIOBUTTON CHECKED
+                //RADIOBUTHON CHECKED
 
                 if (rdbFacRe.Checked == true)
                 {
@@ -151,6 +198,35 @@ namespace ProyConsultora_GUI
                 }
                 else
                     tip = "";
+                //RADIOBUTHONS ESTADO
+
+                if (rdbProgramado.Checked == true)
+                {
+                    estado = 0;
+                }
+                else
+                if (rdbEjecucion.Checked == true)
+                {
+                    estado = 1;
+                }
+                else
+                if (rdbDetenido.Checked == true)
+                {
+                    estado = 2;
+                }
+                else
+                if (rdbCancelado.Checked == true)
+                {
+                    estado = 3;
+                }
+                else
+                if (rdbFinalizado.Checked == true)
+                {
+                    estado = 4;
+                }
+                else
+                    estado = 0;
+
 
 
                 //Si todo está ok...
@@ -161,7 +237,7 @@ namespace ProyConsultora_GUI
                 objProyectoBE.Tip_Proy = tip;
                 objProyectoBE.Usu_Ult_Mod = clsCredenciales.Usuario;
                 objProyectoBE.Imp_Imp_Estm = Convert.ToDouble(txtPresupuesto.Text.Trim());
-                objProyectoBE.Estado = Convert.ToInt16(chkEstado.Checked);
+                objProyectoBE.Estado = Convert.ToInt16(estado);
                
 
                 //invocamos al metodo insertar
@@ -190,6 +266,15 @@ namespace ProyConsultora_GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPresupuesto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+
+            e.Handled = !(char.IsDigit(e.KeyChar)
+                    || e.KeyChar == (char)Keys.Back
+                    || e.KeyChar.ToString() == cc.NumberFormat.NumberDecimalSeparator);
         }
     }
 }

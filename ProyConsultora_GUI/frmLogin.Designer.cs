@@ -70,7 +70,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(187, 27);
-            this.txtPassword.TabIndex = 0;
+            this.txtPassword.TabIndex = 1;
             // 
             // label2
             // 
@@ -86,7 +86,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(386, 131);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(116, 43);
-            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

@@ -149,6 +149,7 @@
             this.txtSueldo.Size = new System.Drawing.Size(142, 27);
             this.txtSueldo.TabIndex = 14;
             this.txtSueldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // label3
             // 
@@ -192,7 +193,7 @@
             // 
             this.mskDoc.Location = new System.Drawing.Point(330, 278);
             this.mskDoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.mskDoc.Mask = "99999999999";
+            this.mskDoc.Mask = "999999999999";
             this.mskDoc.Name = "mskDoc";
             this.mskDoc.Size = new System.Drawing.Size(177, 27);
             this.mskDoc.TabIndex = 6;
@@ -376,9 +377,9 @@
             this.rdbCarne.Name = "rdbCarne";
             this.rdbCarne.Size = new System.Drawing.Size(134, 24);
             this.rdbCarne.TabIndex = 2;
-            this.rdbCarne.TabStop = true;
             this.rdbCarne.Text = "Carné Extrajería";
             this.rdbCarne.UseVisualStyleBackColor = true;
+            this.rdbCarne.CheckedChanged += new System.EventHandler(this.rdbCarne_CheckedChanged);
             // 
             // rdbPasa
             // 
@@ -387,13 +388,14 @@
             this.rdbPasa.Name = "rdbPasa";
             this.rdbPasa.Size = new System.Drawing.Size(95, 24);
             this.rdbPasa.TabIndex = 1;
-            this.rdbPasa.TabStop = true;
             this.rdbPasa.Text = "Pasaporte";
             this.rdbPasa.UseVisualStyleBackColor = true;
+            this.rdbPasa.CheckedChanged += new System.EventHandler(this.rdbPasa_CheckedChanged);
             // 
             // rdbDni
             // 
             this.rdbDni.AutoSize = true;
+            this.rdbDni.Checked = true;
             this.rdbDni.Location = new System.Drawing.Point(16, 38);
             this.rdbDni.Name = "rdbDni";
             this.rdbDni.Size = new System.Drawing.Size(56, 24);
@@ -401,6 +403,7 @@
             this.rdbDni.TabStop = true;
             this.rdbDni.Text = "DNI";
             this.rdbDni.UseVisualStyleBackColor = true;
+            this.rdbDni.CheckedChanged += new System.EventHandler(this.rdbDni_CheckedChanged);
             // 
             // label2
             // 
@@ -419,6 +422,7 @@
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(372, 27);
             this.txtCelular.TabIndex = 9;
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // txtTel
             // 
@@ -429,6 +433,7 @@
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(372, 27);
             this.txtTel.TabIndex = 8;
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // txtEmail
             // 

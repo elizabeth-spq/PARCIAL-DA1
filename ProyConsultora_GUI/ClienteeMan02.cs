@@ -116,9 +116,11 @@ namespace ProyConsultora_GUI
                 {
                     throw new Exception("El Nº de Documento es obligatorio");
                 }
-                if (rdbCarne.Checked == true && mskDoc.Text.Trim().Length != 9)
+                
+                if (rdbCarne.Checked == true && mskDoc.Text.Trim().Length < 8 )
                 {
-                    throw new Exception("El carné de extrajería debe tener 9 caracteres");
+                    
+                    throw new Exception("El carné de extrajería debe tener entre 8 y 12 caracteres");
                 }
                 if (rdbDni.Checked == true && mskDoc.Text.Trim().Length != 8)
                 {
@@ -128,8 +130,8 @@ namespace ProyConsultora_GUI
                 {
                     throw new Exception("El Ruc debe tener 11 caracteres");
                 }
-             
 
+                MessageBox.Show(mskDoc.Text.Trim() + "-" + mskDoc.Text.Trim().Length);
                 //RADIOBUTTON CHECKED
 
                 if (rdbDni.Checked == true)
@@ -221,7 +223,7 @@ namespace ProyConsultora_GUI
         private void rdbCarne_CheckedChanged(object sender, EventArgs e)
         {
             mskDoc.Clear();
-            mskDoc.Mask = "999999999";
+            mskDoc.Mask = "999999999999";
         }
 
         private void txtTel_KeyPress(object sender, KeyPressEventArgs e)

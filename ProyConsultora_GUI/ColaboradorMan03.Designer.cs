@@ -181,6 +181,7 @@
             this.txtSueldo.Size = new System.Drawing.Size(142, 27);
             this.txtSueldo.TabIndex = 14;
             this.txtSueldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // label3
             // 
@@ -441,6 +442,7 @@
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(372, 27);
             this.txtCelular.TabIndex = 7;
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // txtTel
             // 
@@ -451,6 +453,7 @@
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(372, 27);
             this.txtTel.TabIndex = 6;
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // txtEmail
             // 

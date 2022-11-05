@@ -33,8 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPresupuesto = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.chkEstado = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.cboArea = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
@@ -46,18 +44,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.grpEstados = new System.Windows.Forms.GroupBox();
+            this.rdbDetenido = new System.Windows.Forms.RadioButton();
+            this.rdbFinalizado = new System.Windows.Forms.RadioButton();
+            this.rdbEjecucion = new System.Windows.Forms.RadioButton();
+            this.rdbCancelado = new System.Windows.Forms.RadioButton();
+            this.rdbProgramado = new System.Windows.Forms.RadioButton();
             this.grpDatos.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.grpEstados.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpDatos
             // 
+            this.grpDatos.Controls.Add(this.grpEstados);
             this.grpDatos.Controls.Add(this.lblCodigo);
             this.grpDatos.Controls.Add(this.label3);
             this.grpDatos.Controls.Add(this.txtPresupuesto);
             this.grpDatos.Controls.Add(this.label12);
-            this.grpDatos.Controls.Add(this.chkEstado);
-            this.grpDatos.Controls.Add(this.label11);
             this.grpDatos.Controls.Add(this.cboArea);
             this.grpDatos.Controls.Add(this.btnCancelar);
             this.grpDatos.Controls.Add(this.btnGrabar);
@@ -69,7 +73,7 @@
             this.grpDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpDatos.Name = "grpDatos";
             this.grpDatos.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpDatos.Size = new System.Drawing.Size(544, 449);
+            this.grpDatos.Size = new System.Drawing.Size(544, 488);
             this.grpDatos.TabIndex = 0;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Datos";
@@ -93,41 +97,22 @@
             // 
             // txtPresupuesto
             // 
-            this.txtPresupuesto.Location = new System.Drawing.Point(21, 384);
+            this.txtPresupuesto.Location = new System.Drawing.Point(18, 447);
             this.txtPresupuesto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPresupuesto.Name = "txtPresupuesto";
             this.txtPresupuesto.Size = new System.Drawing.Size(142, 27);
             this.txtPresupuesto.TabIndex = 3;
             this.txtPresupuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPresupuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPresupuesto_KeyPress);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(22, 354);
+            this.label12.Location = new System.Drawing.Point(19, 417);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(92, 20);
             this.label12.TabIndex = 20;
             this.label12.Text = "Presupuesto:";
-            // 
-            // chkEstado
-            // 
-            this.chkEstado.AutoSize = true;
-            this.chkEstado.Location = new System.Drawing.Point(234, 389);
-            this.chkEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(106, 24);
-            this.chkEstado.TabIndex = 4;
-            this.chkEstado.Text = "Finalizado?";
-            this.chkEstado.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.Location = new System.Drawing.Point(232, 352);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 28);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Estado";
             // 
             // cboArea
             // 
@@ -136,13 +121,13 @@
             this.cboArea.Location = new System.Drawing.Point(135, 136);
             this.cboArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboArea.Name = "cboArea";
-            this.cboArea.Size = new System.Drawing.Size(372, 28);
+            this.cboArea.Size = new System.Drawing.Size(379, 28);
             this.cboArea.TabIndex = 1;
             this.cboArea.SelectionChangeCommitted += new System.EventHandler(this.cboArea_SelectionChangeCommitted);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(365, 387);
+            this.btnCancelar.Location = new System.Drawing.Point(365, 432);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(142, 42);
             this.btnCancelar.TabIndex = 6;
@@ -152,7 +137,7 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(365, 329);
+            this.btnGrabar.Location = new System.Drawing.Point(217, 432);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(142, 42);
             this.btnGrabar.TabIndex = 5;
@@ -168,7 +153,7 @@
             this.groupBox1.Controls.Add(this.rdbFacRe);
             this.groupBox1.Location = new System.Drawing.Point(19, 194);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 115);
+            this.groupBox1.Size = new System.Drawing.Size(495, 115);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Proyecto:";
@@ -230,7 +215,7 @@
             this.txtNombre.Location = new System.Drawing.Point(135, 85);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(372, 27);
+            this.txtNombre.Size = new System.Drawing.Size(379, 27);
             this.txtNombre.TabIndex = 0;
             // 
             // label1
@@ -241,11 +226,81 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
+            // grpEstados
+            // 
+            this.grpEstados.Controls.Add(this.rdbDetenido);
+            this.grpEstados.Controls.Add(this.rdbFinalizado);
+            this.grpEstados.Controls.Add(this.rdbEjecucion);
+            this.grpEstados.Controls.Add(this.rdbCancelado);
+            this.grpEstados.Controls.Add(this.rdbProgramado);
+            this.grpEstados.Location = new System.Drawing.Point(19, 315);
+            this.grpEstados.Name = "grpEstados";
+            this.grpEstados.Size = new System.Drawing.Size(495, 91);
+            this.grpEstados.TabIndex = 24;
+            this.grpEstados.TabStop = false;
+            this.grpEstados.Text = "Estado:";
+            // 
+            // rdbDetenido
+            // 
+            this.rdbDetenido.AutoSize = true;
+            this.rdbDetenido.Location = new System.Drawing.Point(372, 29);
+            this.rdbDetenido.Name = "rdbDetenido";
+            this.rdbDetenido.Size = new System.Drawing.Size(92, 24);
+            this.rdbDetenido.TabIndex = 2;
+            this.rdbDetenido.TabStop = true;
+            this.rdbDetenido.Text = "Detenido";
+            this.rdbDetenido.UseVisualStyleBackColor = true;
+            // 
+            // rdbFinalizado
+            // 
+            this.rdbFinalizado.AutoSize = true;
+            this.rdbFinalizado.Location = new System.Drawing.Point(194, 56);
+            this.rdbFinalizado.Name = "rdbFinalizado";
+            this.rdbFinalizado.Size = new System.Drawing.Size(98, 24);
+            this.rdbFinalizado.TabIndex = 1;
+            this.rdbFinalizado.TabStop = true;
+            this.rdbFinalizado.Text = "Finalizado";
+            this.rdbFinalizado.UseVisualStyleBackColor = true;
+            // 
+            // rdbEjecucion
+            // 
+            this.rdbEjecucion.AutoSize = true;
+            this.rdbEjecucion.Location = new System.Drawing.Point(194, 26);
+            this.rdbEjecucion.Name = "rdbEjecucion";
+            this.rdbEjecucion.Size = new System.Drawing.Size(113, 24);
+            this.rdbEjecucion.TabIndex = 1;
+            this.rdbEjecucion.TabStop = true;
+            this.rdbEjecucion.Text = "En ejecución";
+            this.rdbEjecucion.UseVisualStyleBackColor = true;
+            // 
+            // rdbCancelado
+            // 
+            this.rdbCancelado.AutoSize = true;
+            this.rdbCancelado.Location = new System.Drawing.Point(11, 59);
+            this.rdbCancelado.Name = "rdbCancelado";
+            this.rdbCancelado.Size = new System.Drawing.Size(100, 24);
+            this.rdbCancelado.TabIndex = 0;
+            this.rdbCancelado.TabStop = true;
+            this.rdbCancelado.Text = "Cancelado";
+            this.rdbCancelado.UseVisualStyleBackColor = true;
+            // 
+            // rdbProgramado
+            // 
+            this.rdbProgramado.AutoSize = true;
+            this.rdbProgramado.Checked = true;
+            this.rdbProgramado.Location = new System.Drawing.Point(11, 29);
+            this.rdbProgramado.Name = "rdbProgramado";
+            this.rdbProgramado.Size = new System.Drawing.Size(113, 24);
+            this.rdbProgramado.TabIndex = 0;
+            this.rdbProgramado.TabStop = true;
+            this.rdbProgramado.Text = "Programado";
+            this.rdbProgramado.UseVisualStyleBackColor = true;
+            // 
             // ProyectoMan03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 477);
+            this.ClientSize = new System.Drawing.Size(568, 510);
             this.Controls.Add(this.grpDatos);
             this.Name = "ProyectoMan03";
             this.Text = "ProyectoMan03";
@@ -254,6 +309,8 @@
             this.grpDatos.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.grpEstados.ResumeLayout(false);
+            this.grpEstados.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -263,8 +320,6 @@
         internal GroupBox grpDatos;
         private TextBox txtPresupuesto;
         private Label label12;
-        private CheckBox chkEstado;
-        internal Label label11;
         private ComboBox cboArea;
         private Button btnCancelar;
         private Button btnGrabar;
@@ -278,5 +333,11 @@
         private Label label1;
         private Label lblCodigo;
         private Label label3;
+        private GroupBox grpEstados;
+        private RadioButton rdbDetenido;
+        private RadioButton rdbFinalizado;
+        private RadioButton rdbEjecucion;
+        private RadioButton rdbCancelado;
+        private RadioButton rdbProgramado;
     }
 }

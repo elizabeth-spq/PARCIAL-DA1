@@ -58,7 +58,8 @@ namespace ProyConsultora_GUI
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             String tip = "";
-           
+            int estado;
+
             try
             {
                 //Validamos...
@@ -75,7 +76,7 @@ namespace ProyConsultora_GUI
                 {
                     throw new Exception("El presupuesto es obligatorio");
                 }
-                //RADIOBUTTON CHECKED
+                //RADIOBUTTON TIPO DE PROYECTO CHECKED
 
                 if (rdbFacRe.Checked == true)
                 {
@@ -98,14 +99,43 @@ namespace ProyConsultora_GUI
                 else
                     tip = "";
 
-               
+                //RADIOBUTTON ESTADO
+
+                if (rdbProgramado.Checked == true)
+                {
+                    estado = 0;
+                }
+                else
+                if (rdbEjecucion.Checked == true)
+                {
+                    estado = 1;
+                }
+                else
+                if (rdbDetenido.Checked == true)
+                {
+                    estado = 2;
+                }
+                else
+                if (rdbCancelado.Checked == true)
+                {
+                    estado = 3;
+                }
+                else
+                if (rdbFinalizado.Checked == true)
+                {
+                    estado = 4;
+                }
+                else
+                    estado = 0;
+
+
                 //Si todo está ok...
                 objProyectoBE.Cod_Area = cboArea.SelectedValue.ToString();
                 objProyectoBE.Nom_Proy = txtNombre.Text.Trim();
                 objProyectoBE.Tip_Proy = tip;
                 objProyectoBE.Usu_Registro = clsCredenciales.Usuario;
                 objProyectoBE.Imp_Imp_Estm = Convert.ToDouble(txtPresupuesto.Text.Trim());
-                objProyectoBE.Estado = Convert.ToInt16(chkEstado.Checked);
+                objProyectoBE.Estado = Convert.ToInt16(estado);
 
 
                 //invocamos al metodo insertar
