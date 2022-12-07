@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.grpDatos = new System.Windows.Forms.GroupBox();
+            this.grpEstados = new System.Windows.Forms.GroupBox();
+            this.rdbDetenido = new System.Windows.Forms.RadioButton();
+            this.rdbFinalizado = new System.Windows.Forms.RadioButton();
+            this.rdbEjecucion = new System.Windows.Forms.RadioButton();
+            this.rdbCancelado = new System.Windows.Forms.RadioButton();
+            this.rdbProgramado = new System.Windows.Forms.RadioButton();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPresupuesto = new System.Windows.Forms.TextBox();
@@ -44,15 +50,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.grpEstados = new System.Windows.Forms.GroupBox();
-            this.rdbDetenido = new System.Windows.Forms.RadioButton();
-            this.rdbFinalizado = new System.Windows.Forms.RadioButton();
-            this.rdbEjecucion = new System.Windows.Forms.RadioButton();
-            this.rdbCancelado = new System.Windows.Forms.RadioButton();
-            this.rdbProgramado = new System.Windows.Forms.RadioButton();
             this.grpDatos.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.grpEstados.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpDatos
@@ -77,6 +77,76 @@
             this.grpDatos.TabIndex = 0;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Datos";
+            // 
+            // grpEstados
+            // 
+            this.grpEstados.Controls.Add(this.rdbDetenido);
+            this.grpEstados.Controls.Add(this.rdbFinalizado);
+            this.grpEstados.Controls.Add(this.rdbEjecucion);
+            this.grpEstados.Controls.Add(this.rdbCancelado);
+            this.grpEstados.Controls.Add(this.rdbProgramado);
+            this.grpEstados.Location = new System.Drawing.Point(19, 315);
+            this.grpEstados.Name = "grpEstados";
+            this.grpEstados.Size = new System.Drawing.Size(495, 91);
+            this.grpEstados.TabIndex = 24;
+            this.grpEstados.TabStop = false;
+            this.grpEstados.Text = "Estado:";
+            // 
+            // rdbDetenido
+            // 
+            this.rdbDetenido.AutoSize = true;
+            this.rdbDetenido.Location = new System.Drawing.Point(372, 29);
+            this.rdbDetenido.Name = "rdbDetenido";
+            this.rdbDetenido.Size = new System.Drawing.Size(92, 24);
+            this.rdbDetenido.TabIndex = 2;
+            this.rdbDetenido.TabStop = true;
+            this.rdbDetenido.Text = "Detenido";
+            this.rdbDetenido.UseVisualStyleBackColor = true;
+            // 
+            // rdbFinalizado
+            // 
+            this.rdbFinalizado.AutoSize = true;
+            this.rdbFinalizado.Location = new System.Drawing.Point(194, 56);
+            this.rdbFinalizado.Name = "rdbFinalizado";
+            this.rdbFinalizado.Size = new System.Drawing.Size(98, 24);
+            this.rdbFinalizado.TabIndex = 1;
+            this.rdbFinalizado.TabStop = true;
+            this.rdbFinalizado.Text = "Finalizado";
+            this.rdbFinalizado.UseVisualStyleBackColor = true;
+            // 
+            // rdbEjecucion
+            // 
+            this.rdbEjecucion.AutoSize = true;
+            this.rdbEjecucion.Location = new System.Drawing.Point(194, 26);
+            this.rdbEjecucion.Name = "rdbEjecucion";
+            this.rdbEjecucion.Size = new System.Drawing.Size(113, 24);
+            this.rdbEjecucion.TabIndex = 1;
+            this.rdbEjecucion.TabStop = true;
+            this.rdbEjecucion.Text = "En ejecución";
+            this.rdbEjecucion.UseVisualStyleBackColor = true;
+            // 
+            // rdbCancelado
+            // 
+            this.rdbCancelado.AutoSize = true;
+            this.rdbCancelado.Location = new System.Drawing.Point(11, 59);
+            this.rdbCancelado.Name = "rdbCancelado";
+            this.rdbCancelado.Size = new System.Drawing.Size(100, 24);
+            this.rdbCancelado.TabIndex = 0;
+            this.rdbCancelado.TabStop = true;
+            this.rdbCancelado.Text = "Cancelado";
+            this.rdbCancelado.UseVisualStyleBackColor = true;
+            // 
+            // rdbProgramado
+            // 
+            this.rdbProgramado.AutoSize = true;
+            this.rdbProgramado.Checked = true;
+            this.rdbProgramado.Location = new System.Drawing.Point(11, 29);
+            this.rdbProgramado.Name = "rdbProgramado";
+            this.rdbProgramado.Size = new System.Drawing.Size(113, 24);
+            this.rdbProgramado.TabIndex = 0;
+            this.rdbProgramado.TabStop = true;
+            this.rdbProgramado.Text = "Programado";
+            this.rdbProgramado.UseVisualStyleBackColor = true;
             // 
             // lblCodigo
             // 
@@ -165,7 +235,6 @@
             this.rdbNoFac.Name = "rdbNoFac";
             this.rdbNoFac.Size = new System.Drawing.Size(122, 24);
             this.rdbNoFac.TabIndex = 3;
-            this.rdbNoFac.TabStop = true;
             this.rdbNoFac.Text = "No Facturable";
             this.rdbNoFac.UseVisualStyleBackColor = true;
             // 
@@ -176,7 +245,6 @@
             this.rdbHorasTra.Name = "rdbHorasTra";
             this.rdbHorasTra.Size = new System.Drawing.Size(165, 24);
             this.rdbHorasTra.TabIndex = 2;
-            this.rdbHorasTra.TabStop = true;
             this.rdbHorasTra.Text = "Por horas trabajadas";
             this.rdbHorasTra.UseVisualStyleBackColor = true;
             // 
@@ -187,7 +255,6 @@
             this.rdbFacNoRe.Name = "rdbFacNoRe";
             this.rdbFacNoRe.Size = new System.Drawing.Size(190, 24);
             this.rdbFacNoRe.TabIndex = 1;
-            this.rdbFacNoRe.TabStop = true;
             this.rdbFacNoRe.Text = "Facturable no recurrente";
             this.rdbFacNoRe.UseVisualStyleBackColor = true;
             // 
@@ -198,7 +265,6 @@
             this.rdbFacRe.Name = "rdbFacRe";
             this.rdbFacRe.Size = new System.Drawing.Size(169, 24);
             this.rdbFacRe.TabIndex = 0;
-            this.rdbFacRe.TabStop = true;
             this.rdbFacRe.Text = "Facturable recurrente";
             this.rdbFacRe.UseVisualStyleBackColor = true;
             // 
@@ -226,76 +292,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
-            // grpEstados
-            // 
-            this.grpEstados.Controls.Add(this.rdbDetenido);
-            this.grpEstados.Controls.Add(this.rdbFinalizado);
-            this.grpEstados.Controls.Add(this.rdbEjecucion);
-            this.grpEstados.Controls.Add(this.rdbCancelado);
-            this.grpEstados.Controls.Add(this.rdbProgramado);
-            this.grpEstados.Location = new System.Drawing.Point(19, 315);
-            this.grpEstados.Name = "grpEstados";
-            this.grpEstados.Size = new System.Drawing.Size(495, 91);
-            this.grpEstados.TabIndex = 24;
-            this.grpEstados.TabStop = false;
-            this.grpEstados.Text = "Estado:";
-            // 
-            // rdbDetenido
-            // 
-            this.rdbDetenido.AutoSize = true;
-            this.rdbDetenido.Location = new System.Drawing.Point(372, 29);
-            this.rdbDetenido.Name = "rdbDetenido";
-            this.rdbDetenido.Size = new System.Drawing.Size(92, 24);
-            this.rdbDetenido.TabIndex = 2;
-            this.rdbDetenido.TabStop = true;
-            this.rdbDetenido.Text = "Detenido";
-            this.rdbDetenido.UseVisualStyleBackColor = true;
-            // 
-            // rdbFinalizado
-            // 
-            this.rdbFinalizado.AutoSize = true;
-            this.rdbFinalizado.Location = new System.Drawing.Point(194, 56);
-            this.rdbFinalizado.Name = "rdbFinalizado";
-            this.rdbFinalizado.Size = new System.Drawing.Size(98, 24);
-            this.rdbFinalizado.TabIndex = 1;
-            this.rdbFinalizado.TabStop = true;
-            this.rdbFinalizado.Text = "Finalizado";
-            this.rdbFinalizado.UseVisualStyleBackColor = true;
-            // 
-            // rdbEjecucion
-            // 
-            this.rdbEjecucion.AutoSize = true;
-            this.rdbEjecucion.Location = new System.Drawing.Point(194, 26);
-            this.rdbEjecucion.Name = "rdbEjecucion";
-            this.rdbEjecucion.Size = new System.Drawing.Size(113, 24);
-            this.rdbEjecucion.TabIndex = 1;
-            this.rdbEjecucion.TabStop = true;
-            this.rdbEjecucion.Text = "En ejecución";
-            this.rdbEjecucion.UseVisualStyleBackColor = true;
-            // 
-            // rdbCancelado
-            // 
-            this.rdbCancelado.AutoSize = true;
-            this.rdbCancelado.Location = new System.Drawing.Point(11, 59);
-            this.rdbCancelado.Name = "rdbCancelado";
-            this.rdbCancelado.Size = new System.Drawing.Size(100, 24);
-            this.rdbCancelado.TabIndex = 0;
-            this.rdbCancelado.TabStop = true;
-            this.rdbCancelado.Text = "Cancelado";
-            this.rdbCancelado.UseVisualStyleBackColor = true;
-            // 
-            // rdbProgramado
-            // 
-            this.rdbProgramado.AutoSize = true;
-            this.rdbProgramado.Checked = true;
-            this.rdbProgramado.Location = new System.Drawing.Point(11, 29);
-            this.rdbProgramado.Name = "rdbProgramado";
-            this.rdbProgramado.Size = new System.Drawing.Size(113, 24);
-            this.rdbProgramado.TabIndex = 0;
-            this.rdbProgramado.TabStop = true;
-            this.rdbProgramado.Text = "Programado";
-            this.rdbProgramado.UseVisualStyleBackColor = true;
-            // 
             // ProyectoMan03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -307,10 +303,10 @@
             this.Load += new System.EventHandler(this.ProyectoMan03_Load);
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.grpEstados.ResumeLayout(false);
             this.grpEstados.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

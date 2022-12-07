@@ -102,9 +102,9 @@ namespace ProyConsultora_GUI
                     tip3 = false;
                 }
 
-                rdbPasa.Checked = tip1;
-                rdbDni.Checked = tip2;
-                rdbCarne.Checked = tip3;
+                rdbPasa.Checked = tip3;
+                rdbDni.Checked = tip1;
+                rdbCarne.Checked = tip2;
                 mskDoc.Text = objColaboradorBE.Num_Doc_Col;
                 txtTel.Text = objColaboradorBE.Tel_Col;
                 txtCelular.Text = objColaboradorBE.Cel_Col;
@@ -297,6 +297,7 @@ namespace ProyConsultora_GUI
                 objColaboradorBE.Sue_Col = Convert.ToDouble(txtSueldo.Text.Trim());
                 objColaboradorBE.Est_Col = Convert.ToInt16(chkEstado.Checked);
                 // Si cambio la foto...
+                
                 if (blnCambio == true)
                 {
                     objColaboradorBE.Fot_Col = File.ReadAllBytes(openFileDialog1.FileName);
@@ -306,8 +307,8 @@ namespace ProyConsultora_GUI
                     objColaboradorBE.Fot_Col = FotoOriginal;
                 }
 
-                objColaboradorBE.Usu_Ult_Mod = "pfrey";
-                //objColaboradorBE.Usu_Ult_Mod = clsCredenciales.Usuario;
+                //objColaboradorBE.Usu_Ult_Mod = "pfrey";
+                objColaboradorBE.Usu_Ult_Mod = clsCredenciales.Usuario;
                 //invocamos al metodo insertar
 
                 if (objColaboradorBL.ActualizarColaborador(objColaboradorBE) == true)
