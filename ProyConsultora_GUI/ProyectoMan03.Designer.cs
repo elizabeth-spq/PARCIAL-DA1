@@ -299,7 +299,8 @@
             this.ClientSize = new System.Drawing.Size(568, 510);
             this.Controls.Add(this.grpDatos);
             this.Name = "ProyectoMan03";
-            this.Text = "ProyectoMan03";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Actualizar Proyecto";
             this.Load += new System.EventHandler(this.ProyectoMan03_Load);
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();

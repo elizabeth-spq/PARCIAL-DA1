@@ -32,7 +32,7 @@ namespace ProyConsultora_GUI
             try
             {
                 // Cargamos los combos Area
-                CargarArea("");
+                CargarArea("0");
             }
 
             catch (Exception ex)
@@ -43,7 +43,13 @@ namespace ProyConsultora_GUI
         }
         private void CargarArea(String bArea)
         {
-            cboArea.DataSource = objAreaBL.ListarArea();
+            DataTable dt = objAreaBL.ListarArea();
+            DataRow dr;
+            cboArea.DataSource = dt;
+            dr = dt.NewRow();
+            dr["Cod_Area"] = 0;
+            dr["Nom_Area"] = "--Seleccione--";
+            dt.Rows.InsertAt(dr, 0);
             cboArea.DisplayMember = "Nom_Area";
             cboArea.ValueMember = "Cod_Area";
             cboArea.SelectedValue = bArea;

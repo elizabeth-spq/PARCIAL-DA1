@@ -131,7 +131,7 @@ namespace ProyConsultora_GUI
                     throw new Exception("El Ruc debe tener 11 caracteres");
                 }
 
-                MessageBox.Show(mskDoc.Text.Trim() + "-" + mskDoc.Text.Trim().Length);
+                
                 //RADIOBUTTON CHECKED
 
                 if (rdbDni.Checked == true)

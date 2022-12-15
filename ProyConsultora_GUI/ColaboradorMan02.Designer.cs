@@ -506,7 +506,8 @@
             this.ClientSize = new System.Drawing.Size(1078, 715);
             this.Controls.Add(this.grpDatos);
             this.Name = "ColaboradorMan02";
-            this.Text = "ColaboradorMan02";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nuevo Colaborador";
             this.Load += new System.EventHandler(this.ColaboradorMan02_Load);
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();

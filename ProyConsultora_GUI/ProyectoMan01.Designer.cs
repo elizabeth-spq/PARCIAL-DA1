@@ -238,7 +238,7 @@
             this.MinimizeBox = false;
             this.Name = "ProyectoMan01";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mantenimiento de Productos";
+            this.Text = "Mantenimiento de Proyectos";
             this.Load += new System.EventHandler(this.ProductoMan01_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.ResumeLayout(false);
